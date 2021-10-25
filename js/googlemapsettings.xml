@@ -1,0 +1,558 @@
+<?xml version="1.0"?>
+
+<main>
+
+	<mapoptions><!-- This sets the inital values when the map loads for he first time -->
+		
+		<mapid>map_canvas</mapid> <!-- ID of the <div> where you want your map to manifest -->
+		<buttoncontainerid>buttons</buttoncontainerid>  <!-- ID of the <div> where you want your marker buttons to populate -->
+		<mapstartposition>54.901882,-4.21875</mapstartposition> <!-- Long. / Lat. position when the map initialises  -->
+		<zoom>5</zoom><!-- Zoom level map when map initialises -->
+		<maptypeId>Styled</maptypeId><!-- Maptype ID - leave as Styled -->
+		<disabledefaultui>true</disabledefaultui><!-- Disable the default UI - BOOLEAN: true or false -->
+		<custommarkerimage>http://www1.hays.com/jobs/styleapps/template-assets/map_icon.png</custommarkerimage><!-- Location of the custom marker image -->
+
+	</mapoptions>
+
+	<mapstyle><!-- Map styling controls -->
+
+		<lightness>0</lightness><!-- numercal  Range: -100 to 100 -->
+		<gamma>0</gamma><!-- numercal  Range: 0 to 10.00 (example: 5.79 - (goes two decimal places)) -->
+		<saturation>0</saturation><!-- numercal  Range: -100 to 100 -->
+		<hue>#cbe1ee</hue> <!-- Accepts HEX only with a # at the beginning -->
+		<invertlightness>false</invertlightness><!-- BOOLEAN: true or false -->
+		<visibility>on</visibility><!-- on or off -->
+
+	</mapstyle>
+
+	<locations>
+		
+		<location>
+			<title>Birmingham</title> <!-- Marker title -->
+			<address> 
+				<![CDATA[
+				<h2>Birmingham</h2><p>St Philip's House,<br /> 4 St Philip's Place,<br /> Birmingham, B3 2SL</p>
+				]]>
+			</address>
+			<zoomlevel>13</zoomlevel><!-- Zoom level when marker or button is clicked -->
+			<ll>52.481912, -1.897693</ll> <!-- Long. / Lat. position when the map initialises  -->
+		</location>
+
+		<location>
+			<title>Brighton</title>
+			<address>
+				<![CDATA[
+				<h2>Brighton</h2><p>2nd Floor,<br /> International House,<br /> 78/81 Queens Road,<br /> Brighton, BN1 3XE</p>
+				]]>
+			</address>
+			<zoomlevel>13</zoomlevel>
+			<ll>50.828142, -0.141278</ll>
+		</location>
+
+		<location>
+			<title>Bristol</title>
+			<address>
+				<![CDATA[
+				<h2>Bristol</h2><p>Hartwell House,<br /> 55-61 Victoria Street,<br /> Bristol, BS1 6AD</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>51.452119, -2.588478</ll>
+
+
+		</location>
+
+
+		<location>
+			<title>Cambridge</title>
+			<address>
+				<![CDATA[
+				<h2>Cambridge</h2><p>Terrington House,<br />  13-15 Hills Road,<br />  Cambridge, CB2 1NL</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>52.198056, 0.129216</ll>
+
+
+		</location>
+
+
+		<location>
+			<title>Canterbury</title>
+			<address>
+				<![CDATA[
+				<h2>Canterbury</h2><p>81-82 Castle Street,<br />  Canterbury,<br />  Kent, CT1 2QD</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>51.277677, 1.077553</ll>
+
+
+		</location>
+
+
+		<location>
+			<title>Cardiff </title>
+			<address>
+				<![CDATA[
+				<h2>Cardiff </h2><p>1st Floor,<br />  5 Callaghan Square,<br />  Cardiff, CF10 5BT</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>51.475228, -3.176288</ll>
+
+
+		</location>
+
+
+		<location>
+			<title>Chelmsford</title>
+			<address>
+				<![CDATA[
+				<h2>Chelmsford </h2><p>2nd Floor, French's Gate,<br /> 18-22 Springfield Road,<br />  Chelmsford CM2 6FA</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>51.732406, 0.475590</ll>
+
+
+		</location>
+
+
+		<location>
+			<title>Cheltenham</title>
+			<address>
+				<![CDATA[
+				<h2>Cheltenham</h2><p>53-57 Rodney Road,<br />  Cheltenham, GL50 1HX</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>51.899017, -2.075006</ll>
+
+
+		</location>
+
+		<location>
+			<title>Coventry</title>
+			<address>
+				<![CDATA[
+				<h2>Coventry</h2><p>2nd Floor,<br />  188-190 Spon Street, <br /> Coventry, CV1 3BB</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>52.408585, -1.517837</ll>
+
+
+		</location>
+
+		<location>
+			<title>Enfield</title>
+			<address>
+				<![CDATA[
+				<h2>Enfield</h2><p>2nd Floor, Cecil Court,<br /> 49-55 London Road,<br /> Enfield EN2 6DS</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>51.650005, -0.080747</ll>
+
+
+		</location>
+
+
+		<location>
+			<title>Exeter</title>
+			<address>
+				<![CDATA[
+				<h2>Exeter</h2><p>11-15 Dix's Field,<br /> Exeter, EX1 1QA</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>50.724166, -3.524380</ll>
+
+
+		</location>
+
+		<location>
+			<title>Midlands PA</title>
+			<address>
+				<![CDATA[
+				<h2>Midlands PA</h2><p>St Philip's House,<br /> 4 St Philip's Place,<br /> Birmingham, B3 2SL</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>52.481853, -1.897682</ll>
+
+
+		</location>
+
+		<location>
+			<title>Huddersfield</title>
+			<address>
+				<![CDATA[
+				<h2>Huddersfield</h2><p>3rd Floor, <br /> 14 St George's Square,<br />  Huddersfield, HD1 1JF</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>53.647637, -1.784959</ll>
+
+
+		</location>
+
+		<location>
+			<title>Hull</title>
+			<address>
+				<![CDATA[
+				<h2>Hull</h2><p>Permanent House,<br />  25 South Street,<br />  Hull, HU1 3QD</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>53.743988, -0.343448</ll>
+
+
+		</location>
+
+		<location>
+			<title>Leeds</title>
+			<address>
+				<![CDATA[
+				<h2>Leeds</h2><p>Sovereign House, <br /> South Parade, <br /> Leeds, LS1 5QL</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>53.799519, -1.547464</ll>
+
+
+		</location>
+
+
+		<location>
+			<title>Leicester</title>
+			<address>
+				<![CDATA[
+				<h2>Leicester</h2><p>1st Floor, 2 Colton Square,<br /> Leicester, LE1 1QH</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>52.634018, -1.126161</ll>
+
+
+		</location>
+
+		<location>
+			<title>Leicester Compliance</title>
+			<address>
+				<![CDATA[
+				<h2>Leicester Compliance</h2><p>1st Floor, 2 Colton Square,<br /> Leicester, LE1 1QH</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>52.634018, -1.126161</ll>
+
+
+		</location>
+
+		<location>
+			<title>Lincoln</title>
+			<address>
+				<![CDATA[
+				<h2>Lincoln</h2><p>1st Floor,<br /> 247 High Street,<br /> Lincoln, LN2 1HW</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>53.231233, -0.539887</ll>
+
+
+		</location>
+
+		<location>
+			<title>Liverpool</title>
+			<address>
+				<![CDATA[
+				<h2>Liverpool</h2><p>Silkhouse Court,<br /> Tithebarn Street, <br />Liverpool, L2 2LZ</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>53.408885, -2.991758</ll>
+
+
+		</location>
+
+		<location>
+			<title>London Victoria</title>
+			<address>
+				<![CDATA[
+				<h2>London Victoria  (Ebury Gate)</h2><p>Ebury Gate,<br /> 23 Lower Belgrave Street<br />, London, SW1W 0NT</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>51.495898, -0.146700</ll>
+
+
+		</location>
+
+		<location>
+			<title>London (International)</title>
+			<address>
+				<![CDATA[
+				<h2>London (International)</h2><p>Ebury Gate, <br />23 Lower Belgrave Street, <br />London, SW1W 0NT</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>51.495925, -0.146807</ll>
+
+
+		</location>
+
+		<location>
+			<title>Luton</title>
+			<address>
+				<![CDATA[
+				<h2>Luton</h2><p>3rd Floor, <br />Raglan House,<br /> Alma Street,<br /> Luton, LU1 2PL</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>51.880882, -0.419441</ll>
+
+
+		</location>
+
+		<location>
+			<title>Maidstone </title>
+			<address>
+				<![CDATA[
+				<h2>Maidstone </h2><p>6th Floor,<br />  Kent House,<br />  Romney Place,4th Floor, City Tower, Piccadilly Plaza, Manchester,       M1 4BT Maidstone ME15 6LH</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>51.271459, 0.525881</ll>
+
+
+		</location>
+
+		<location>
+			<title>Manchester </title>
+			<address>
+				<![CDATA[
+				<h2>Manchester</h2><p>4th Floor, <br /> City Tower, <br /> Piccadilly Plaza,<br />  Manchester, M1 4BT</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>53.480573, -2.238990</ll>
+
+
+		</location>
+
+
+		<location>
+			<title>Marketing</title>
+			<address>
+				<![CDATA[
+				<h2>Marketing</h2><p>1st Floor, <br /> 5 Lloyds Avenue, <br /> London, EC3N 3AE</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>51.512131, -0.077691</ll>
+
+
+		</location>
+
+		<location>
+			<title>Middlesbrough</title>
+			<address>
+				<![CDATA[
+				<h2>Middlesbrough</h2><p>Sun Alliance House,<br /> 16-26 Albert Road, <br />Middlesbrough, TS1 1QA</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>54.577850, -1.234001</ll>
+
+
+		</location>
+
+		<location>
+			<title>Newcastle </title>
+			<address>
+				<![CDATA[
+				<h2>Newcastle </h2><p>Kelburn House, <br />7-19 Mosley Street,<br /> Newcastle upon Tyne, <br />Tyne and Wear, NE1 1YE</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>54.971426, -1.610192</ll>
+
+
+		</location>
+
+
+		<location>
+			<title>Northampton </title>
+			<address>
+				<![CDATA[
+				<h2>Northampton </h2><p>Suite C, <br />3rd Floor, <br />Charles House,<br /> 61-69 Derngate, <br />Northampton, NN1 1UE</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>52.236377, -0.891480</ll>
+
+
+		</location>
+
+		<location>
+			<title>Norwich</title>
+			<address>
+				<![CDATA[
+				<h2>Norwich</h2><p>Suite C, <br />Suite A, <br />Ground Floor,<br /> 1 Prince of Wales Road,<br /> Norwich, NR1 1BD</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>52.629419, 1.299789</ll>
+
+
+		</location>
+
+		<location>
+			<title>Nottingham</title>
+			<address>
+				<![CDATA[
+				<h2>Nottingham</h2><p>2nd Floor,<br /> 5 Alan House,<br /> Clumber Street,<br /> Nottingham, NG1 3ED</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>52.954430, -1.147908</ll>
+
+
+		</location>
+
+		<location>
+			<title>Plymouth</title>
+			<address>
+				<![CDATA[
+				<h2>Plymouth</h2><p>Royal London House, <br /> 153-155 Armada Way, <br /> Plymouth,<br />  Devon, PL1 1HX</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>50.372278, -4.142932</ll>
+
+
+		</location>
+
+		<location>
+			<title>Portsmouth</title>
+			<address>
+				<![CDATA[
+				<h2>Portsmouth</h2><p>12 Edinburgh Road,<br />   Portsmouth PO1 1BE</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>50.372278, -4.142932</ll>
+
+
+		</location>
+
+
+		<location>
+			<title>Preston</title>
+			<address>
+				<![CDATA[
+				<h2>Preston</h2><p>6th Floor, Norwest Court,<br />  Guildhall Street,<br />  Preston, PR1 3NU</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>53.757457, -2.700043</ll>
+
+
+		</location>
+
+
+		<location>
+			<title>Reading</title>
+			<address>
+				<![CDATA[
+				<h2>Reading</h2><p>The Blade,<br /> 6th Floor,<br /> Abbey Square,<br /> Reading RG1 3BE</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>51.455909, -0.967341</ll>
+
+
+		</location>
+
+		<location>
+			<title>Sheffield</title>
+			<address>
+				<![CDATA[
+				<h2>Sheffield</h2><p>1st Floor The Ruskin Buildings,<br />  Tudor Square,<br />  Sheffield, S1 2LA</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>53.380983, -1.467533</ll>
+
+
+		</location>
+
+		<location>
+			<title>Stafford </title>
+			<address>
+				<![CDATA[
+				<h2>Stafford </h2><p>1st Floor, Unit 8, <br />Greyfriars Business Park, <br />Frank Foley Way,<br /> Greyfriars, <br />Stafford, ST16 2RF</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>52.813040, -2.125673</ll>
+
+
+		</location>
+
+		<location>
+			<title>Swindon</title>
+			<address>
+				<![CDATA[
+				<h2>Swindon</h2><p>SN1, Part 3rd Floor,<br /> Station Road,<br /> Swinson, SN1 1DG</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>51.565167, -1.784780</ll>
+
+
+		</location>
+
+		<location>
+			<title>Wigan</title>
+			<address>
+				<![CDATA[
+				<h2>Wigan</h2><p>Unit 91,<br /> The Galleries,<br /> 1 Hindley Walk, <br />Wigan, WN1 1AY</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>53.547670, -2.632105</ll>
+
+
+		</location>
+
+		<location>
+			<title>Woking</title>
+			<address>
+				<![CDATA[
+				<h2>Woking</h2><p>1st Floor,<br /> Griffin House, <br />West Street, <br />Woking, GU21 6BS</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>51.320896, -0.558211</ll>
+
+
+		</location>
+
+		<location>
+			<title>Wolverhampton</title>
+			<address>
+				<![CDATA[
+				<h2>Wolverhampton</h2><p>Derwent House,<br /> 42-46 Waterloo Road,<br /> Wolverhampton, WV1 4XB</p>
+				]]>
+			</address>
+			<zoomlevel>4</zoomlevel>
+			<ll>52.587635, -2.132352</ll>
+
+
+		</location>
+	</locations>
+
+</main>

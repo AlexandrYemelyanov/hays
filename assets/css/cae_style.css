@@ -1,0 +1,112 @@
+.save-job-alert-container {
+	background: #ffffff;
+	padding: 10px;
+	position: fixed;
+	bottom: 0;
+	width: 1220px;
+	box-shadow: 0 -2px 18px rgba(0, 0, 0, .20);
+	z-index: 1000;
+}
+
+.save-alert-form {
+	margin-left: 110px;
+	width: 980px;
+}
+
+.save-alert-form input {
+	padding: 11px;
+	width: 70%;
+	border: 1px solid #ddd;
+	background-color: #f4f4f4;
+	border-radius: 0;
+}
+
+.save-alert-form .action {
+	float: right;
+	width: 275px;
+	position: relative;
+}
+
+.save-alert-form .action .btn-primary {
+	font-family: 'Gotham Narrow A', 'Gotham Narrow B', Arial, sans-serif;
+	display: inline-block;
+	background-color: #009ed9;
+	text-align: center;
+	padding: 9px 18px;
+	border: 0;
+	cursor: pointer;
+	font-size: 14px;
+	margin-left: 5px;
+	font-weight: bold;
+}
+
+.save-alert-form .action .btn-primary {
+	margin-left: 0;
+	color: #fff;
+	width: 200px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	padding: 13px;
+	background: #e98300;
+}
+
+.save-alert-form .action .btn-close {
+	width: 40px;
+	height: 40px;
+	line-height: 22px;
+	text-align: center;
+	font-size: 30px;
+	background: none;
+}
+
+.save-alert-form .action .btn-close, .filter-bar li .filter-value a {
+	display: inline-block;
+	transform: rotate(45deg);
+	color: #002776;
+	font-size: 20px;
+	padding: 3px;
+	position: absolute;
+	top: 4px;
+	right: 40px;
+}
+@media screen and (max-width: 768px) {
+	.save-job-alert-container{
+		width: 768px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.save-alert-form {
+		margin-left: 0;
+		width: 100%;
+	}
+	.save-alert-form input {
+		width: 60%;
+		margin-bottom: 15px;
+	}
+	.save-alert-form .action {
+		float: left;
+		width: 40%;
+		position: relative;
+	}
+}
+@media screen and (max-width: 320px) {
+	.save-job-alert-container{
+		width: 320px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.save-alert-form {
+		margin-left: 0;
+		width: 100%;
+	}
+	.save-alert-form input {
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	.save-alert-form .action {
+		float: left;
+		width: 100%;
+		position: relative;
+	}
+}

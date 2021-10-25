@@ -1,0 +1,22 @@
+03.02.21 15:59:22  https://api.mindbox.ru/v3/operations/async?endpointId=hays&operation=Website.Klik.UznBolshe.ResearchHays&deviceUUID=c9cc46ba-c15e-44af-a1a0-efaad587ee04
+
+03.02.21 15:59:22  Array
+(
+    [customer] => Array
+        (
+            [ids] => Array
+                (
+                    [clientID] => c9cc46ba-c15e-44af-a1a0-efaad587ee04
+                )
+
+        )
+
+)
+
+
+03.02.21 15:59:22  Array
+(
+    [status] => Success
+)
+
+
