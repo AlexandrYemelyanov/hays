@@ -782,6 +782,123 @@ if ( current_user_can( 'author' ) ) {
 	add_action( 'admin_menu', 'remove_menus' );
 }
 
+add_action('admin_menu', 'grade_menu' );
+function grade_menu()
+{
+	add_menu_page('Оценки сайта', 'Оценки сайта', 'manage_options', 'career-grade', 'career_grade_page', 'dashicons-edit' );
+}
+function career_grade_page()
+{
+	global $wpdb;
+
+	$grades_res = $wpdb->get_results("SELECT `id`, `rate`, `comment`, unix_timestamp(`date`) `dt` FROM `wp_career_grade_site` ORDER BY `date` DESC");
+
+	$grades = [];
+	foreach ($grades_res as $item) {
+		$grades[] = [
+			'id' => $item->id,
+			'rate' => $item->rate,
+			'comment' => $item->comment,
+			'date' => date('d.m.Y', $item->dt)
+		];
+	}
+
+	echo '<link rel="stylesheet" href="' . get_template_directory_uri() . 'css/tree/style.min.css" type="text/css" />' . PHP_EOL;
+	echo '<link rel="stylesheet" href="' . get_template_directory_uri() . 'css/select2.min.css" type="text/css" />' . PHP_EOL;
+	echo '<link rel="stylesheet" href="' . get_template_directory_uri() . 'css/style.admin.css" type="text/css" />' . PHP_EOL;
+	ob_start();
+
+	?>
+    <style>
+        .text-center {
+            text-align: center !important;
+        }
+        .delete-grade {
+            color: #f80404;
+            font-weight: bold;
+        }
+        a.delete-grade:hover, a.delete-grade:focus, a.delete-grade:active {
+            color: #a40707 !important;
+            border: none;
+        }
+        .col-1 {
+            width: 10% !important;
+        }
+        .col-9 {
+            width: 70% !important;
+        }
+    </style>
+    <script>
+        jQuery(function($){
+            $('.delete-grade').click(function(e){
+                e.preventDefault();
+                var obj = $(this),
+                    id = obj.data('id');
+                $.ajax({
+                    url: '/wp-admin/admin-ajax.php',
+                    type: 'POST',
+                    data: {
+                        action: "career_delete_grade_site",
+                        id: id
+                    },
+                    success: function (data) {
+                        obj.closest('tr').remove();
+                    }
+                });
+            });
+        });
+
+    </script>
+    <div class="wrap">
+        <h1 class="wp-heading-inline">Оценки сайта</h1>
+        <div class="success hide">Оценки удалены</div>
+
+        <table class="wp-list-table widefat fixed striped table-view-list posts">
+            <thead>
+            <tr>
+                <th scope="col" id="title" class="manage-column column-title column-primary text-center col-1"><span>Дата</span></th>
+                <th scope="col" id="title" class="manage-column column-title column-primary text-center col-1"><span>Оценка</span></th>
+                <th scope="col" id="title" class="manage-column column-title column-primary col-9"><span>Комментарий</span></th>
+                <th class="col-1"></th>
+            </tr>
+            </thead>
+
+            <tbody id="the-list">
+			<? foreach ($grades as $item): ?>
+                <tr>
+                    <td class="text-center"><? echo $item['date']; ?></td>
+                    <td class="text-center"><? echo $item['rate']; ?></td>
+                    <td><? echo $item['comment']; ?></td>
+                    <td><a href="#" data-id="<? echo $item['id']; ?>" class="delete-grade"><span class="dashicons dashicons-no"></span></a></td>
+                </tr>
+			<? endforeach; ?>
+            </tbody>
+
+        </table>
+
+
+
+    </div>
+	<?php
+	$res = ob_get_clean();
+
+	echo $res;
+}
+
+add_action('wp_ajax_career_delete_grade_site', 'career_delete_grade_site');
+add_action('wp_ajax_nopriv_career_delete_grade_site', 'career_delete_grade_site');
+
+function career_delete_grade_site()
+{
+	global $wpdb;
+	$id = (int)$_POST['id'];
+
+	if($id) {
+		$wpdb->query("DELETE FROM `wp_career_grade_site` WHERE `id` = ".$id);
+	}
+	die;
+}
+
 // Function to change email address
 
 // function wpb_sender_email( $original_email_address ) {
@@ -1563,7 +1680,10 @@ function career_send_grade_site()
 	if (!empty($rate) || !empty($comment)) {
 		//$mess = !empty($rate) ? '<p>Оценка: '.$rate.'</p>' : '';
 		///$mess .= !empty($comment) ? '<p>Рекомендации: '.$comment.'</p>' : '';
-
+		$res = $wpdb->get_results("SELECT id FROM `wp_career_grade_site` WHERE `rate` = ".$rate." AND `comment` = '".$comment."'");
+		if (count($res)) {
+			return 0;
+		}
 		global $wpdb;
 		$wpdb->query("INSERT INTO `wp_career_grade_site` (`rate`, `comment`) VALUES ('".$rate."', '".$comment."')");
 
