@@ -19,8 +19,8 @@
 
     <a href="#0" class="cd-top js-cd-top">Top</a>
 
-<form id="grade-form" class="">
-    <div class="grade-form--close"><span>></span></div>
+<form id="grade-form">
+    <div class="grade-form--close up"><span>></span></div>
     <div class="grade-form--title">
         Оцените пожалуйста ресурс:
     </div>

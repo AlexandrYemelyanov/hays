@@ -7855,22 +7855,44 @@ $(function () {
 
 	setInterval(function() {
 		if (((new Date()).getTime() - startSpentTime) >= dedtime && stopSpentTime < 1) {
-			$('#grade-form').show();
-			stopSpentTime = 1;
-			$.cookie('spend_time', '', { expires: 30, path: '/' });
-			$.cookie('spend_time_stop', 1, { expires: 180, path: '/' });
+			gradeFormShowAnimate();
 		}
 	}, 5000);
 
 	$('#grade-form .grade-form--close').on('click', function(){
+		var obj = $(this);
+		if (obj.hasClass('up')) {
+			gradeFormShowAnimate();
+		} else {
+			gradeFormHideAnimate();
+		}
+	});
+
+	function gradeFormShowAnimate()
+	{
 		$('#grade-form').animate({
-			height: "toggle"
+			bottom: "0"
 		}, 1000, function() {
+			$('#grade-form .grade-form--close').removeClass('up');
+			stopSpentTime = 1;
 			$.cookie('spend_time', '', { expires: 30, path: '/' });
 			$.cookie('spend_time_stop', 1, { expires: 180, path: '/' });
 		});
-
-	});
+	}
+	function gradeFormHideAnimate()
+	{
+		$('.grade.active').removeClass('active');
+		$('#grade-form .step-1').show();
+		$('#grade-form .step-2').hide();
+		$('#grade-form__send').removeClass('active').data('step', 1).text('Далее');
+		$('#grade-form').animate({
+			bottom: "-188px"
+		}, 1000, function() {
+			$('#grade-form .grade-form--close').addClass('up');
+			$.cookie('spend_time', '', { expires: 30, path: '/' });
+			$.cookie('spend_time_stop', 1, { expires: 180, path: '/' });
+		});
+	}
 
 	$('#grade-form .rate').on('click', 'li.grade', function() {
 		var obj = $(this),
