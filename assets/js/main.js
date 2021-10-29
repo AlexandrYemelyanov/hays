@@ -7885,6 +7885,7 @@ $(function () {
 		$('#grade-form .step-1').show();
 		$('#grade-form .step-2').hide();
 		$('#grade-form__send').removeClass('active').data('step', 1).text('Далее');
+
 		$('#grade-form').animate({
 			bottom: "-188px"
 		}, 1000, function() {

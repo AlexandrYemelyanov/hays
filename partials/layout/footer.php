@@ -19,7 +19,7 @@
 
     <a href="#0" class="cd-top js-cd-top">Top</a>
 
-<form id="grade-form">
+<form id="grade-form" class="close">
     <div class="grade-form--close up"><span>></span></div>
     <div class="grade-form--title">
         Оцените пожалуйста ресурс:
